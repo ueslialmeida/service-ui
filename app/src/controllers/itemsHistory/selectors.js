@@ -55,6 +55,7 @@ export const historyPageLinkSelector = createSelector(
   }),
 );
 
+// TODO: get proper grouping field here
 export const historySelector = createSelector(
   itemsHistorySelector,
   filterForCompareSelector,

@@ -154,6 +154,7 @@ function* fetchFilterHistory({ payload: { filter, loadMore } }) {
   if (loadMore) {
     items = itemsHistory.slice(-HISTORY_ITEMS_TO_LOAD);
   }
+  // TODO: get proper grouping field here
   params['filter.in.testCaseHash'] = items.map((item) => item.testCaseHash).join(',');
 
   yield put(
